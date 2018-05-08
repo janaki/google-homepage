@@ -1,0 +1,5 @@
+ruby_version: 'ruby-2.1.5'
+bundler_version: 1.10.6
+
+test_pattern:
+  - spec/**_spec.rb
