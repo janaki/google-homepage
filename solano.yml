@@ -4,7 +4,7 @@ worker_limit: 2
 test_pattern:                                
   - spec/*_spec.rb                       
 tests:
-  - bundle exec rspec 
+  - rspec 
 
 hooks:
    pre_setup: "echo 'copy configs'"        # Runs before database setup
