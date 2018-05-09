@@ -1,5 +1,5 @@
-ruby_version: ruby-2.4.1
-bundler_version: 1.3.5
+ruby_version: ruby-2.3.6
+bundler_version: 1.16.1
 worker_limit: 2
 test_pattern:                                
   - spec/*_spec.rb                       
