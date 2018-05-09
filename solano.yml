@@ -1,6 +1,17 @@
 ruby_version:ruby-2.4.1
 bundler_version: 1.3.5
+worker_limit: 2
 test_pattern:                                
   - spec/*_spec.rb                       
 tests:
   - bundle exec rspec 
+
+hooks:
+   pre_setup: "echo 'copy configs'"        # Runs before database setup
+   worker_setup: "echo 'create dbs'"       # Runs once for each worker to do, e.g., database setup
+   post_setup: "echo 'compile assets'"     # Runs once after worker hook before tests
+   post_worker: "echo 'capture screenshots'"    # Runs after a worker is done
+   post_build: "echo 'deploy to staging'"  # Runs once on master after entire build completes
+
+test_pattern:  
+ - spec/**_spec.rb  
