@@ -3,7 +3,7 @@ bundler_version: 1.16.1
 worker_limit: 2
 
 tests:
-  - rspec 
+  - bundle exec rspec 
 
 hooks:
    pre_setup: "echo running  setup "
