@@ -2,9 +2,6 @@ ruby_version: ruby-2.3.6
 bundler_version: 1.16.1
 worker_limit: 2
 
-tests:
-  - bundle exec rspec 
-
 hooks:
    pre_setup: "echo running  setup "
    worker_setup: "echo worker setup"       # Runs once for each worker to do, e.g., database setup
