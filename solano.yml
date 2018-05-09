@@ -6,7 +6,7 @@ tests:
   - rspec 
 
 hooks:
-   pre_setup: "echo 'copy configs'"
+   pre_setup: "gem install bundler"
    worker_setup: "echo 'create dbs'"       # Runs once for each worker to do, e.g., database setup
    post_setup: "echo 'compile assets'"     # Runs once after worker hook before tests
    post_worker: "echo 'capture screenshots'"    # Runs after a worker is done
