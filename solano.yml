@@ -6,9 +6,9 @@ worker_limit: 2
 hooks:
    pre_setup: "echo running  setup "
    worker_setup: "echo worker setup"       # Runs once for each worker to do, e.g., database setup
-   post_setup: "echo 'compile assets'"     # Runs once after worker hook before tests
-   post_worker: "echo 'capture screenshots'"    # Runs after a worker is done
+   post_setup: "echo 'Finished running tests'"     # Runs once after worker hook before tests
+   post_worker: "echo 'capturing screenshots for failed tests'"    # Runs after a worker is done
    post_build: "echo 'deploy to staging'"  # Runs once on master after entire build completes
 tests:
- - 'ruby'
+ - 'rspec'
 
