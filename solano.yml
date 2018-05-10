@@ -9,7 +9,7 @@ hooks:
    post_worker: "echo 'capture screenshots'"    # Runs after a worker is done
    post_build: "echo 'deploy to staging'"  # Runs once on master after entire build completes
 tests:
- - 'bundle exec rspec'
+ - 'ruby'
 
 test_pattern:  
  - spec/**_spec.rb  
